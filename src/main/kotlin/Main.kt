@@ -1,9 +1,12 @@
 
 
 fun main() {
-    val x = isEven(5)
-    println(x)
+    val dog = Animal("Dog")
 
+}
+
+fun Int.isOdd(): Boolean {
+    return this % 2 == 1
 }
 
 fun isEven(number: Int = 10): Boolean {
