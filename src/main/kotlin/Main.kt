@@ -1,8 +1,21 @@
-
+import kotlin.Exception
 
 fun main() {
-    val dog = Animal("Dog")
+    val list = listOf("Kotlin", "is", "fun")
+    val count = list.count { currentString ->
+        currentString.length == 3
+    }
+    println(count)
+}
 
+fun <T> List<T>.customCount(function: (T) -> Boolean): Int {
+    var counter = 0
+    for(string in this){
+        if(function(string)){
+            counter ++
+        }
+    }
+    return counter
 }
 
 fun Int.isOdd(): Boolean {
